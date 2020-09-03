@@ -23,5 +23,23 @@ pipeline {
                 sh 'java --version'
             }
         }
+                
+        stage ('Create java file') {
+            steps {
+                sh 'touch Main.java'
+            }
+        }
+        
+        stage ('Compile java file') {
+            steps {
+                sh 'javac Main.java'
+            }
+        }
+        
+        stage ('Execute java file') {
+            steps {
+                sh 'java Main.class'
+            }
+        }
     }
 }
