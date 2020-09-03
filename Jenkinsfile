@@ -32,7 +32,7 @@ pipeline {
         
         stage ('Execute java file') {
             steps {
-                sh 'java Main.class'
+                sh 'java Main'
             }
         }
     }
